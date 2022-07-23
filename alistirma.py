@@ -15,7 +15,7 @@ def kısı_ekle():
     kişi_numara = int(input('kişi numarasını girin: '))
     kişi_not = int(input('kişi notunu girin: '))
     users_data[kişi_input] = {'soyisim': kişi_soyisim, 'numara': kişi_numara}
-    if kişi_not <= 0 or kişi_not >= 100:
+    if kişi_not < 0 or kişi_not > 100:
         users_data[kişi_input]['sınavnotu'] = 'invalid number'
     elif kişi_not >= 85:
         users_data[kişi_input]['sınavnotu'] = kişi_not
